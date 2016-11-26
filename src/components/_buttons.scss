@@ -1,0 +1,59 @@
+// =============================================================================
+// = Buttons
+// =============================================================================
+
+// =================
+// = Button Filled =
+// =================
+.btn {
+  display         : inline-block;
+  font-weight     : bold;
+  text-transform  : uppercase;
+  color           : #fff;
+  padding         : 10px 25px;
+  font-size       : fsize('small');
+  letter-spacing  : 1px;
+  border-radius   : $base-radius;
+  background-color: color('purple');
+
+  &:hover {
+    background-color: darken(color('purple'), 5%);
+  }
+
+  &.is--loading {
+    position: relative;
+
+    span {
+      opacity: 0;
+    }
+    @include preloader(18px, 2px, white, absolute);
+
+    &:before {
+      margin: 2px 2px 2px -9px;
+    }
+  }
+}
+
+// ==================
+// = Button Outline =
+// ==================
+.btn-outline {
+  @extend .btn;
+  padding         : rem(8px 25px);
+  background-color: transparent;
+  border          : 2px solid color('purple');
+  color           : color('purple');
+
+  &:hover {
+    background-color: color('purple');
+    color           : white;
+  }
+}
+
+// =================
+// = Button Sizes =
+// =================
+.btn--small {
+  padding  : rem(5px 20px);
+  font-size: fsize('small');
+}

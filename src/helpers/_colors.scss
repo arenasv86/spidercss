@@ -1,0 +1,19 @@
+// =============================================================================
+// = Colors
+// =============================================================================
+
+// ============================================
+// = Generate Fill Background & Class Colors  =
+// ============================================
+@if $generate-color-helpers == true {
+  
+   @each $name, $value in $base-colors{
+    .text-#{$name} {
+      color: $value !important;
+    }
+
+    .fill-#{$name} {
+      background-color: $value !important;
+    }
+  }
+}

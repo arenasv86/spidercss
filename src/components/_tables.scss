@@ -1,0 +1,36 @@
+// =============================================================================
+// = Tables
+// =============================================================================
+
+// ================
+// = Fixed Layout =
+// ================
+.table-fixed {
+  table-layout: fixed;
+}
+
+// ================
+// = Styled Table =
+// ================
+.styled-table {
+  border-collapse: collapse;
+  border-spacing : 0;
+  border         : 1px solid color('linegrey');
+
+  thead {
+    background-color: color('softgrey');
+    border-bottom   : 1px solid color('linegrey');
+    font-weight     : $bold;
+  }
+
+  td {
+    padding     : rem(15px);
+    border-right: 1px solid color('linegrey');
+  }
+
+  tbody {
+    tr {
+      border-bottom: 1px solid color('linegrey');
+    }
+  }
+}

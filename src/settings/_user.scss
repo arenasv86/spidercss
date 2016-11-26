@@ -1,0 +1,64 @@
+// =============================================================================
+// = Project Setup
+// =============================================================================
+
+// Setup the base font size for your project. If you want you cant change the line height.
+
+$base-font-size              : 16px !default;
+$line-height-ratio           : 1.5 !default;
+$base-line-height            : $base-font-size * $line-height-ratio !default;
+
+// =========================
+// = Flexbox Grid Settings =
+// =========================
+$grid-columns                : 12 !default;
+$grid-columns-mobile         : 4 !default;
+$gutter-width                : 15px !default;
+$container-desktop-padding   : 30px !default;
+$container-mobile-padding    : 15px !default;
+$row-max-width               : 1180px !default;
+
+$responsive-breakpoints : (
+  mobile: rem(767px),
+  tablet: rem(1024px)
+);
+
+// ===============
+// = Font Styles =
+// ===============
+$basetypeface                : "Helvetica Neue", Helvetica, Arial, sans-serif;
+$light                       : 300;
+$normal                      : 400;
+$semibold                    : 500;
+$bold                        : 600;
+
+// ==============
+// = Font Sizes =
+// ==============
+$font-sizes : (
+  'xxlarge' : 48px,
+  'xlarge' : 32px,
+  'large' : 24px,
+  'medium' : 18px,
+  'base' : 16px,
+  'small' : 14px,
+  'xsmal' : 12px
+);
+
+// ==========
+// = Colors =
+// ==========
+$base-colors : (
+  'darkblack' : #363E47,
+  'softblack' : #546673,
+  'linegrey' : #D5DEE3,
+  'white': #fff,
+  'purple': #52489C,
+  'blue' : #4062BB,
+  'green' : #59C3C3,
+  'red' : #F45B69
+);
+
+$base-radius                : 4px !default;
+$base-transition            : 0.25s !default;
+$outline-button-border-width: 2px;

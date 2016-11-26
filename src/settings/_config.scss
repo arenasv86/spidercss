@@ -1,0 +1,30 @@
+// =============================================================================
+// = Project Configuration
+// =============================================================================
+//
+// For better performance as the result of a lower file size, select the items that you want to include in your projects.
+//
+
+// ===============
+// = Componenets =
+// ===============
+
+// ===========
+// = Helpers =
+// ===========
+// Generate font size classes for each one defined in
+$generate-font-helpers: true;
+
+// Generate font size classes for each one defined in
+$generate-color-helpers: true;
+
+// Generate font size classes for each one defined in
+$generate-spacing-helpers: true;
+
+// ========
+// = Grid =
+// ========
+
+$generate-flexbox-grid: true;
+
+$generate-flexbox-grid-offsets: false;

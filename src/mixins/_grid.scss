@@ -1,0 +1,119 @@
+// =============================================================================
+// = Grid Generator
+// =============================================================================
+
+// ======================
+// = Visibility Classes =
+// ======================
+//
+// Generate visibility classes for each device maped in $responsive-breakpoints
+//
+@mixin visibility-classes($device) {
+
+   @each $breakpoint, $value in $responsive-breakpoints{
+    .show-#{$breakpoint} {
+      @if $breakpoint == $device {
+        display: block !important;
+      }
+      @else {
+        display: none !important;
+      }
+    }
+
+    .hide-#{$breakpoint} {
+      @if $breakpoint == $device {
+        display: none !important;
+      }
+      @else {
+        display: block !important;
+      }
+    }
+  }
+}
+
+// ================
+// = Grid Helpers =
+// ================
+//
+// Generate position helpers in flexbox for each device maped in $responsive-breakpoints
+//
+@mixin grid-helpers($device) {
+  // Apply at the .row element
+
+  .start-#{$device} {
+    @include justify-content(flex-start);
+    text-align: start;
+  }
+
+  .center-#{$device} {
+    @include justify-content(center);
+    text-align: center;
+  }
+
+  .end-#{$device} {
+    @include justify-content(flex-end);
+    text-align: end;
+  }
+
+  .top-#{$device} {
+    @include align-items(flex-start);
+  }
+
+  .middle-#{$device} {
+    @include align-items(center);
+  }
+
+  .bottom-#{$device} {
+    @include align-items(flex-end);
+  }
+
+  .around-#{$device} {
+    @include justify-content(space-around);
+  }
+
+  .between-#{$device} {
+    @include justify-content(space-between);
+  }
+
+  .first-#{$device} {
+    order: -1;
+  }
+
+  .last-#{$device} {
+    order: 1;
+  }
+
+}
+
+// ==================
+// = Grid Generator =
+// ==================
+//
+// Generate the whole flexbox grid for each device maped in $responsive-breakpoints
+//
+@mixin grid-generator($prefix: null, $num-cols: $grid-columns) {
+  
+   @for $i from 1 through $num-cols{
+    @if $i / $num-cols == 1 {
+      .#{$prefix}colfull {
+        @include flex( 0 0 100% / $num-cols * $i);
+        max-width: 100% / $num-cols * $i;
+      }
+    }
+    @else {
+      .#{$prefix}col#{$i}of#{$num-cols} {
+        @include flex( 0 0 100% / $num-cols * $i);
+        max-width: 100% / $num-cols * $i;
+      }
+    }
+  }
+  @if $generate-flexbox-grid-offsets == true {
+     @for $i from 0 through $num-cols{
+      @if $i / $num-cols != 0 {
+        .#{$prefix}offset#{$i}of#{$num-cols} {
+          margin-left: ($i / $num-cols) * 100%;
+        }
+      }
+    }
+  }
+}

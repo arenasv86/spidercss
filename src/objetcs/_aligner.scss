@@ -1,0 +1,17 @@
+// =============================================================================
+// = Aligners
+// =============================================================================
+
+.o-aligner {
+	@include flex();
+	@include align-items(center);
+	@include justify-content(center);
+
+	&__top {
+		@include align-items(flex-start);
+	}
+
+	&__bottom {
+		@include align-items(flex-end);
+	}
+}

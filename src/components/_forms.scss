@@ -1,0 +1,195 @@
+// =============================================================================
+// = Form Elements
+// =============================================================================
+
+// ===========================
+// = All Form Elements Reset =
+// ===========================
+.input,
+[type="date"],
+[type="email"],
+[type="number"],
+[type="password"],
+[type="search"],
+[type="tel"],
+[type="text"],
+[type="url"],
+input[type="checkbox"],
+input[type="radio"],
+select,
+textarea {
+  @include prefix(appearance, none);
+  border-radius   : $base-radius;
+  background-color: white;
+  font-family     : $basetypeface;
+  color           : color('darkblack');
+  resize          : none;
+  border          : 2px solid color('linegrey');
+  width           : 100%;
+  padding         : 12px 15px;
+  @include prefix(transition, all $base-transition ease);
+
+  &.error {
+    border: 2px solid red;
+  }
+
+  &:focus {
+    border : 2px solid color('purple');
+    outline: none;
+  }
+}
+
+input[disabled],
+textarea[disabled] {
+  background-color: #f5f5f5;
+  color           : color('grey');
+  cursor          : not-allowed;
+}
+
+// ======================
+// = Radio & Checkboxes =
+// ======================
+input[type="checkbox"],
+input[type="radio"] {
+  position          : relative;
+  -webkit-appearance: none;
+  height            : 20px;
+  width             : 20px;
+  padding           : 0;
+  margin-right      : 8px;
+  vertical-align    : top;
+  @include prefix(transition, all $base-transition ease);
+}
+
+input[type="checkbox"]:hover,
+input[type="radio"]:hover {
+  border: 2px solid color('purple');
+}
+
+input[type="checkbox"]:checked:before {
+  content         : "";
+  width           : 12px;
+  height          : 12px;
+  position        : absolute;
+  top             : 2px;
+  left            : 2px;
+  text-align      : center;
+  border-radius   : 3px;
+  background-color: color('purple');
+}
+
+input[type="radio"] {
+  border-radius: 50%;
+}
+
+input[type="radio"]:checked {
+  background-color: color('secondary');
+  border          : 3px solid white;
+  box-shadow      : 0 0 0 2px color('linegrey');
+}
+
+button,
+input[type=submit] {
+  @include prefix(transition, all $base-transition ease);
+}
+
+// ===========
+// = Selects =
+// ===========
+select:not([multiple]) {
+  background   : url("data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz48c3ZnIHdpZHRoPSIxNHB4IiBoZWlnaHQ9IjhweCIgdmlld0JveD0iMCAwIDE0IDgiIHZlcnNpb249IjEuMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayI+ICAgICAgICA8dGl0bGU+U2hhcGU8L3RpdGxlPiAgICA8ZGVzYz5DcmVhdGVkIHdpdGggU2tldGNoLjwvZGVzYz4gICAgPGRlZnM+PC9kZWZzPiAgICA8ZyBpZD0iUGFnZS0xIiBzdHJva2U9Im5vbmUiIHN0cm9rZS13aWR0aD0iMSIgZmlsbD0ibm9uZSIgZmlsbC1ydWxlPSJldmVub2RkIj4gICAgICAgIDxnIGlkPSJEZXNrdG9wLUhELUNvcHkiIHRyYW5zZm9ybT0idHJhbnNsYXRlKC0zOTAuMDAwMDAwLCAtODQ5LjAwMDAwMCkiIGZpbGw9IiM4MDg4OTIiPiAgICAgICAgICAgIDxnIGlkPSJjaGV2cm9uLWRvd24iIHRyYW5zZm9ybT0idHJhbnNsYXRlKDM5MC4wMDAwMDAsIDg0OS4wMDAwMDApIj4gICAgICAgICAgICAgICAgPGcgaWQ9IkxheWVyXzEiPiAgICAgICAgICAgICAgICAgICAgPHBhdGggZD0iTTcsNS4zMjE4NzUgTDcsNS4zMjE4NzUgTDcsNS4zMjE4NzUgTDEyLjQ0Mzc1LDAuMDk2ODc1IEMxMi41NzgxMjUsLTAuMDM0Mzc1IDEyLjgsLTAuMDMxMjUgMTIuOTM3NSwwLjEwMzEyNSBMMTMuODkzNzUsMS4wMzc1IEMxNC4wMzEyNSwxLjE3MTg3NSAxNC4wMzQzNzUsMS4zOTA2MjUgMTMuOSwxLjUyMTg3NSBMNy4yNTMxMjUsNy45MDMxMjUgQzcuMTg0Mzc1LDcuOTcxODc1IDcuMDkwNjI1LDguMDAzMTI1IDcsNy45OTY4NzUgQzYuOTA2MjUsOCA2LjgxNTYyNSw3Ljk2ODc1IDYuNzQ2ODc1LDcuOTAzMTI1IEwwLjEsMS41MjE4NzUgQy0wLjAzNDM3NSwxLjM5MDYyNSAtMC4wMzEyNSwxLjE3MTg3NSAwLjEwNjI1LDEuMDM3NSBMMS4wNjI1LDAuMTAzMTI1IEMxLjIsLTAuMDMxMjUgMS40MjE4NzUsLTAuMDM0Mzc1IDEuNTU2MjUsMC4wOTY4NzUgTDcsNS4zMjE4NzUgWiIgaWQ9IlNoYXBlIj48L3BhdGg+ICAgICAgICAgICAgICAgIDwvZz4gICAgICAgICAgICA8L2c+ICAgICAgICA8L2c+ICAgIDwvZz48L3N2Zz4") no-repeat right 1rem center / 0.8rem;
+  padding-right: 35px;
+}
+
+// ============
+// = Textarea =
+// ============
+textarea {
+  height: 100px;
+}
+
+// ===========
+// = Switchs =
+// ===========
+.form-switch {
+  display       : inline-block;
+  vertical-align: middle;
+  position      : relative;
+  top           : -2px;
+
+  input {
+    display: none;
+
+    + .switch-button {
+      position     : relative;
+      display      : block;
+      width        : rem(40px);
+      height       : rem(22px);
+      outline      : 0;
+      cursor       : pointer;
+      user-select  : none;
+      background   : color('linegrey');
+      border-radius: rem(20px);
+      padding      : rem(2px);
+      @include prefix(transition, all $base-transition ease);
+
+      &:after {
+        border-radius: 50%;
+        background   : white;
+        @include prefix(transition, all $base-transition ease);
+      }
+
+      &:after,
+      &:before {
+        position: relative;
+        display : block;
+        content : "";
+        width   : 50%;
+        height  : 100%;
+      }
+
+      &:after {
+        left: 0;
+      }
+
+      &:before {
+        display: none;
+      }
+    }
+
+    &:checked + .switch-button {
+      background: color('purple');
+    }
+
+    &:checked + .switch-button:after {
+      left: 50%;
+    }
+  }
+}
+
+// ===============
+// = Form Groups =
+// ===============
+.form-group {
+  &__field {
+    margin-bottom: rem(15px);
+
+    label {
+      font-weight: bold;
+    }
+  }
+
+  .item-checkbox,
+  .item-radio {
+    cursor      : pointer;
+    display     : inline-block;
+    position    : relative;
+    margin-right: rem(30px);
+
+    input {
+      position      : relative;
+      top           : -2px;
+      vertical-align: middle;
+    }
+  }
+}

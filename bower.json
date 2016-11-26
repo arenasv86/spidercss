@@ -1,0 +1,36 @@
+{
+  "name": "spidercss",
+  "description": "A fully customizable SASS & Flexbox framework for developing responsive web projects.",
+  "main": "dist/spidercss.css",
+  "authors": [
+    "Victor Arenas <arenas.v86@gmail.com> (http://victorarenas.es)"
+  ],
+  "license": "MIT",
+  "keywords": [
+    "css",
+    "sass",
+    "scss",
+    "css3",
+    "framework",
+    "flexbox",
+    "html",
+    "html5",
+    "responsive",
+    "mobile",
+    "ui",
+    "bootstrap",
+    "rem",
+    "mixin",
+    "bem",
+    "oocss",
+    "smaccs"
+  ],
+  "homepage": "index.html",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

@@ -1,0 +1,43 @@
+{
+	"name": "spidercss",
+	"version": "1.0.0",
+	"description": "A fully customizable SASS & Flexbox framework for developing responsive web projects.",
+	"homepage": "https://github.com/arenasv86/spidercss",
+	"repository": "arenasv86/spidercss",
+	"license": "MIT",
+	"author": "Victor Arenas <arenas.v86@gmail.com> (http://victorarenas.es)",
+	"main": "dist/spidercss.css",
+	"keywords": [
+		"css",
+  	"sass",
+  	"scss",
+  	"css3",
+  	"framework",
+  	"flexbox",
+  	"html",
+  	"html5",
+  	"responsive",
+  	"mobile",
+  	"ui",
+  	"bootstrap",
+  	"rem",
+  	"mixin",
+  	"bem",
+  	"oocss",
+  	"smaccs"
+	],
+	"dependencies": {
+		"normalize.css": "latest"
+	},
+  "devDependencies": {
+    "gulp": "^3.9.0",
+    "gulp-sass": "^2.1.1",
+    "gulp-autoprefixer": "^3.1.0",
+    "gulp-clean-css": "^2.0.2",
+    "gulp-rename": "^1.2.2",
+    "gulp-webserver": "^0.9.1"
+  },
+	"engines": {
+		"node": "^6.0.0"
+	}
+}

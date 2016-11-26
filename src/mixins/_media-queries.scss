@@ -1,0 +1,28 @@
+// =============================================================================
+// = Media Queries
+// =============================================================================
+//
+// Simple mixin for media queries.
+// The parameter for the mixin is each device name mapped in $responsive-breakpoints
+//
+// Usage:
+//
+// .myitem {
+//   background-color:red;
+//
+//   @include responsive(tablet) {
+//     background-color: black;
+//   }
+//
+//   @include responsive(mobile) {
+//     background-color: blue;
+//   }
+// }
+//
+@mixin device($breakpoint) {
+   @if map-has-key($responsive-breakpoints, $breakpoint){
+    @media (max-width: #{map-get($responsive-breakpoints, $breakpoint)}) {
+       @content;
+    }
+  }
+}

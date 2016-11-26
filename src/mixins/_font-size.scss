@@ -1,0 +1,20 @@
+// =============================================================================
+// = Font Size Mixin
+// =============================================================================
+//
+// Generate font size and line height
+//
+@mixin font-size($font-size: $base-font-size, $line-height: $font-size * $line-height-ratio) {
+
+  @if (unitless($font-size)){
+    $font-size: $font-size * 1px;
+  }
+
+  @if (unitless($line-height)) {
+    $line-height: $line-height * 1px;
+  }
+
+  font-size  : ($font-size / $base-font-size) + rem;
+  line-height: ($line-height / $base-font-size) + rem;
+
+}

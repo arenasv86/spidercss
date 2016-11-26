@@ -1,0 +1,30 @@
+// =============================================================================
+// = Core Setup
+// =============================================================================
+
+//
+// Accesing Color Variables
+//
+//
+// body {
+//     background: color('darkblack');
+// }
+//
+
+@function color($color) {
+  @return map-get($base-colors, $color);
+}
+
+
+//
+// Accesing Font Size Variables
+//
+//
+// body {
+//     font-size: fsize('medium');
+// }
+//
+
+@function fsize($size) {
+  @return map-get($font-sizes, $size);
+}

@@ -1,0 +1,102 @@
+// =============================================================================
+// = Typography
+// =============================================================================
+
+// ====================================
+// = Generate Classes for Font Sizes  =
+// ====================================
+@if $generate-font-helpers == true {
+   @each $name, $size in $font-sizes{
+    .t-#{$name} {
+      @include font-size($size);
+    }
+  }
+}
+
+// Use text block for text blocks like paragrpahs, blog posts
+.text-block {
+  
+  p,
+  ul {
+    @include rem(margin-bottom, 15px);
+    @include font-size(16px);
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+
+// ============
+// = Ellipsis =
+// ============
+.ellipsis {
+  @include ellipsis(100%);
+}
+
+// ===================
+// = Text Formatting =
+// ===================
+.light {
+  font-weight: $light;
+}
+
+.normal {
+  font-weight: $normal;
+}
+
+.bold {
+  font-weight: $bold;
+}
+
+.italic {
+  font-style: italic;
+}
+
+.text-center {
+  text-align: center !important;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.uppercase {
+  text-transform: uppercase;
+}
+
+.lowercase {
+  text-transform: lowercase;
+}
+
+.no-transform {
+  text-transform: none;
+}
+
+.underline {
+  border-bottom: 1px solid;
+}
+
+.hover-underline:hover {
+  border-bottom: 1px solid;
+}
+
+.unspaced-text {
+  letter-spacing: - rem(1px);
+}
+
+.unspaced-text-large {
+  letter-spacing: - rem(2px);
+}
+
+.spaced-text {
+  letter-spacing: rem(1px);
+}
+
+.spaced-text-large {
+  letter-spacing: rem(2px);
+}
