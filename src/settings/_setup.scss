@@ -1,8 +1,14 @@
 // =============================================================================
 // = Project Setup
 // =============================================================================
-
-// Setup the base font size for your project. If you want you cant change the line height.
+//
+// For better performance as the result of a lower file size, select the items that you want to include in your projects.
+//
+//
+//
+//
+// Set up the base font size for your project.
+// If you want you can change the line height.
 
 $base-font-size              : 16px !default;
 $line-height-ratio           : 1.5 !default;
@@ -11,13 +17,19 @@ $base-line-height            : $base-font-size * $line-height-ratio !default;
 // =========================
 // = Flexbox Grid Settings =
 // =========================
-$grid-columns                : 12 !default;
-$grid-columns-mobile         : 4 !default;
-$gutter-width                : 15px !default;
-$container-desktop-padding   : 30px !default;
-$container-mobile-padding    : 15px !default;
-$row-max-width               : 1180px !default;
+$generate-flexbox-grid        : true;
+$generate-flexbox-grid-offsets: false;
+$grid-columns                 : 12 !default;
+$grid-columns-mobile          : 4 !default;
+$gutter-width                 : 15px !default;
+$container-desktop-padding    : 30px !default;
+$container-mobile-padding     : 15px !default;
+$row-max-width                : 1180px !default;
 
+// ===============
+// = Breakpoints =
+// ===============
+// Each breakpoint defined here will be accessible with the 'responsive' mixin.
 $responsive-breakpoints : (
   mobile: rem(767px),
   tablet: rem(1024px)
@@ -35,6 +47,7 @@ $bold                        : 600;
 // ==============
 // = Font Sizes =
 // ==============
+// Each font size defined here will be accessible with 'fsize' function.
 $font-sizes : (
   'xxlarge' : 48px,
   'xlarge' : 32px,
@@ -48,6 +61,7 @@ $font-sizes : (
 // ==========
 // = Colors =
 // ==========
+// Each color defined here will be accessible with 'color' function.
 $base-colors : (
   'darkblack' : #363E47,
   'softblack' : #546673,
@@ -58,6 +72,20 @@ $base-colors : (
   'green' : #59C3C3,
   'red' : #F45B69
 );
+
+
+// ===========
+// = Helpers =
+// ===========
+// Generate font size classes for each one defined in
+$generate-font-helpers: true;
+
+// Generate font size classes for each one defined in
+$generate-color-helpers: true;
+
+// Generate font size classes for each one defined in
+$generate-spacing-helpers: true;
+
 
 $base-radius                : 4px !default;
 $base-transition            : 0.25s !default;

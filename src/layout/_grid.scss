@@ -82,7 +82,8 @@
     padding-right: $container-mobile-padding;
   }
 
-  // By default, each col in mobile fits the 100%
+  // By default, each col in mobile fits the 100%.
+  // Delete this property if you want to keep the default width assigned
   [class*='col'] {
     flex-basis: 100%;
   }
