@@ -751,25 +751,6 @@ a {
 .spaced-text-large {
   letter-spacing: 0.125rem; }
 
-.o-aligner {
-  -moz-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
-  -ms-flex-align: center;
-  -moz-align-items: center;
-  align-items: center;
-  -ms-flex-pack: center;
-  -moz-justify-content: center;
-  justify-content: center; }
-  .o-aligner__top {
-    -ms-flex-align: start;
-    -moz-align-items: flex-start;
-    align-items: flex-start; }
-  .o-aligner__bottom {
-    -ms-flex-align: end;
-    -moz-align-items: flex-end;
-    align-items: flex-end; }
-
 .o-equal-height {
   display: -moz-flex;
   display: -ms-flexbox;

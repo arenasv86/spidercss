@@ -13,9 +13,9 @@
   }
 }
 
-// Use text block for text blocks like paragrpahs, blog posts
+
 .text-block {
-  
+
   p,
   ul {
     @include rem(margin-bottom, 15px);
