@@ -10,7 +10,7 @@
   font-weight     : bold;
   text-transform  : uppercase;
   color           : #fff;
-  padding         : 10px 25px;
+  padding         : em(10px 25px);
   font-size       : fsize('small');
   letter-spacing  : 1px;
   border-radius   : $base-radius;
@@ -39,7 +39,7 @@
 // ==================
 .btn-outline {
   @extend .btn;
-  padding         : rem(8px 25px);
+  padding         : em(8px 25px);
   background-color: transparent;
   border          : 2px solid color('purple');
   color           : color('purple');
@@ -54,6 +54,7 @@
 // = Button Sizes =
 // =================
 .btn--small {
-  padding  : rem(5px 20px);
+  @extend .btn;
+  padding  : em(5px 20px);
   font-size: fsize('small');
 }

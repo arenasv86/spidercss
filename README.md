@@ -48,6 +48,7 @@ SpiderCSS is always under development. Feel free to send your requests with this
 │   │   ├── _base.scss
 │   │   ├── _grid.scss
 │   ├── mixins
+│   │   ├── _em.scss
 │   │   ├── _flexbox.scss
 │   │   ├── _font-size.scss
 │   │   ├── _grid.scss
@@ -61,9 +62,8 @@ SpiderCSS is always under development. Feel free to send your requests with this
 │   ├── reset
 │   │   ├── _normalice.scss
 │   ├── settings
-│   │   ├── _config.scss
 │   │   ├── _functions.scss
-│   │   ├── _user.scss
+│   │   ├── _setup.scss
 │   ├── tools
 │   │   ├── _animations.scss
 │   ├── spidercss.scss

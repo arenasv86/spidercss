@@ -773,23 +773,23 @@ a {
     -ms-flex: 1;
         flex: 1; }
 
-.btn, .btn-outline {
+.btn, .btn-outline, .btn--small {
   display: inline-block;
   font-weight: bold;
   text-transform: uppercase;
   color: #fff;
-  padding: 10px 25px;
+  padding: 0.625em 1.5625em;
   font-size: 14px;
   letter-spacing: 1px;
   border-radius: 4px;
   background-color: #52489C; }
-  .btn:hover, .btn-outline:hover {
+  .btn:hover, .btn-outline:hover, .btn--small:hover {
     background-color: #49408b; }
-  .btn.is--loading, .is--loading.btn-outline {
+  .btn.is--loading, .is--loading.btn-outline, .is--loading.btn--small {
     position: relative; }
-    .btn.is--loading span, .is--loading.btn-outline span {
+    .btn.is--loading span, .is--loading.btn-outline span, .is--loading.btn--small span {
       opacity: 0; }
-    .btn.is--loading:before, .is--loading.btn-outline:before {
+    .btn.is--loading:before, .is--loading.btn-outline:before, .is--loading.btn--small:before {
       content: "";
       position: absolute;
       left: 50%;
@@ -801,11 +801,11 @@ a {
       width: 18px;
       display: inline-block;
       animation: rotate 0.5s 0s linear infinite; }
-    .btn.is--loading:before, .is--loading.btn-outline:before {
+    .btn.is--loading:before, .is--loading.btn-outline:before, .is--loading.btn--small:before {
       margin: 2px 2px 2px -9px; }
 
 .btn-outline {
-  padding: 0.5rem 1.5625rem;
+  padding: 0.5em 1.5625em;
   background-color: transparent;
   border: 2px solid #52489C;
   color: #52489C; }
@@ -814,7 +814,7 @@ a {
     color: white; }
 
 .btn--small {
-  padding: 0.3125rem 1.25rem;
+  padding: 0.3125em 1.25em;
   font-size: 14px; }
 
 .input,
