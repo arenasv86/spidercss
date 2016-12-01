@@ -3,14 +3,18 @@
 @import "settings/functions";
 
 // Mixins
+@import "mixins/accessibility";
+@import "mixins/clearfix";
 @import "mixins/em";
 @import "mixins/flexbox";
 @import "mixins/font-size";
 @import "mixins/grid";
-@import "mixins/rem";
-@import "mixins/tools";
-@import "mixins/ratio";
 @import "mixins/media-queries";
+@import "mixins/overlay";
+@import "mixins/prefix";
+@import "mixins/preloader";
+@import "mixins/ratio";
+@import "mixins/rem";
 
 // Reset
 @import "reset/normalize";
