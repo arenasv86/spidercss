@@ -703,6 +703,17 @@ a {
   text-overflow: ellipsis;
   white-space: nowrap; }
 
+.not-selectable {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -ms-text-size-adjust: none;
+  -webkit-text-size-adjust: none;
+  text-size-adjust: none;
+  -webkit-touch-callout: none;
+  -webkit-tap-highlight-color: transparent; }
+
 .light {
   font-weight: 300; }
 
