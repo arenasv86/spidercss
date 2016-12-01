@@ -10,6 +10,11 @@ gulp.task('sass', function() {
     .pipe(sass())
     .pipe(autoprefixer('last 2 versions'))
     .pipe(gulp.dest('./dist/'));
+
+  gulp.src('./docs/assets/scss/base.scss')
+    .pipe(sass())
+    .pipe(autoprefixer('last 2 versions'))
+    .pipe(gulp.dest('./docs/assets/css/'));
 });
 
 gulp.task('css', function() {
