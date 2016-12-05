@@ -29,7 +29,7 @@ $row-max-width                : 1180px !default;
 // ===============
 // = Breakpoints =
 // ===============
-// Each breakpoint defined here will be accessible with the 'responsive' mixin.
+// Each breakpoint defined here will be accessible with the 'breakpoint' mixin.
 $responsive-breakpoints : (
   mobile: rem(767px),
   tablet: rem(1024px)
