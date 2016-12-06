@@ -1,0 +1,112 @@
+// Documentation
+
+.documentation {
+
+  header {
+    height: 80px;
+    margin-bottom: 4rem;
+    background-image: -webkit-linear-gradient(43deg, #38155A 0%, #D95B5A 52%, #FEA54B 100%);
+    background-image: -o-linear-gradient(43deg, #38155A 0%, #D95B5A 52%, #FEA54B 100%);
+    background-image: linear-gradient(133deg, #38155A 0%, #D95B5A 52%, #FEA54B 100%);
+
+    nav {
+      @include font-size(15px);
+      font-family: 'Brandon Grotesque';
+      font-weight: bold;
+      text-align: right;
+      text-transform: uppercase;
+
+      li {
+        display: inline-block;
+        margin: 0 15px;
+        list-style: none;
+      }
+
+      a {
+        color: white;
+      }
+    }
+  }
+
+  aside {
+    @include flex(0 0 300px);
+
+    h3 {
+      color: color('darkblack');
+      font-family: 'Brandon Grotesque';
+      font-weight: 800;
+    }
+
+    ul {
+      margin-bottom: 3rem;
+      padding: 0;
+    }
+
+    li {
+      margin-bottom: 5px;
+      list-style: none;
+
+      &.active a {
+        background-color: color('primary');
+        color: white;
+        font-weight: bold;
+      }
+
+      a {
+        display: inline-block;
+        padding: 5px;
+      }
+    }
+  }
+}
+
+.doc-block {
+  margin-bottom: rem(70px);
+
+  h2 {
+    @include font-size(28px);
+    margin-bottom: rem(10px);
+    color: color('darkblack');
+    font-family: 'Brandon Grotesque';
+    font-weight: 800;
+    text-transform: uppercase;
+  }
+
+  &__description {
+    margin-bottom: rem(30px);
+  }
+
+  h3,
+  h4 {
+    margin-bottom: rem(10px);
+    color: color('darkblack');
+    font-weight: bold;
+  }
+
+  h3 {
+    @include font-size(22px);
+  }
+
+  h4 {
+    @include font-size(18px);
+  }
+}
+
+// Demo Grid
+
+.grid-demo {
+  margin-bottom: 20px;
+
+  .item {
+    padding: rem(20px);
+    border-radius: $base-radius;
+    background-color: color('softgrey');
+  }
+}
+
+
+.test {
+  @include responsive-ratio(16, 10);
+  background: url('http://htmlcolorcodes.com/assets/images/html-color-codes-color-tutorials-hero-00e10b1f.jpg') no-repeat;
+  background-size: cover;
+}
