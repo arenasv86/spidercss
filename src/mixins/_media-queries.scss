@@ -20,9 +20,9 @@
 // }
 //
 @mixin breakpoint($breakpoint) {
-   @if map-has-key($responsive-breakpoints, $breakpoint){
+  @if map-has-key($responsive-breakpoints, $breakpoint) {
     @media (max-width: #{map-get($responsive-breakpoints, $breakpoint)}) {
-       @content;
+      @content;
     }
   }
 }

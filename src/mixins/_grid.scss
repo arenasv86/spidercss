@@ -10,12 +10,11 @@
 //
 @mixin visibility-classes($device) {
 
-   @each $breakpoint, $value in $responsive-breakpoints{
+  @each $breakpoint, $value in $responsive-breakpoints {
     .show-#{$breakpoint} {
       @if $breakpoint == $device {
         display: block !important;
-      }
-      @else {
+      } @else {
         display: none !important;
       }
     }
@@ -23,8 +22,7 @@
     .hide-#{$breakpoint} {
       @if $breakpoint == $device {
         display: none !important;
-      }
-      @else {
+      } @else {
         display: block !important;
       }
     }
@@ -92,23 +90,22 @@
 // Generate the whole flexbox grid for each device maped in $responsive-breakpoints
 //
 @mixin grid-generator($prefix: null, $num-cols: $grid-columns) {
-  
-   @for $i from 1 through $num-cols{
+
+  @for $i from 1 through $num-cols {
     @if $i / $num-cols == 1 {
       .#{$prefix}colfull {
-        @include flex( 0 0 100% / $num-cols * $i);
+        @include flex(0 0 100% / $num-cols * $i);
         max-width: 100% / $num-cols * $i;
       }
-    }
-    @else {
+    } @else {
       .#{$prefix}col#{$i}of#{$num-cols} {
-        @include flex( 0 0 100% / $num-cols * $i);
+        @include flex(0 0 100% / $num-cols * $i);
         max-width: 100% / $num-cols * $i;
       }
     }
   }
   @if $generate-flexbox-grid-offsets == true {
-     @for $i from 0 through $num-cols{
+    @for $i from 0 through $num-cols {
       @if $i / $num-cols != 0 {
         .#{$prefix}offset#{$i}of#{$num-cols} {
           margin-left: ($i / $num-cols) * 100%;

@@ -1,42 +1,42 @@
 // Settings
-@import "settings/setup";
-@import "settings/functions";
+@import 'settings/setup';
+@import 'settings/functions';
 
 // Mixins
-@import "mixins/accessibility";
-@import "mixins/clearfix";
-@import "mixins/em";
-@import "mixins/flexbox";
-@import "mixins/font-size";
-@import "mixins/grid";
-@import "mixins/media-queries";
-@import "mixins/overlay";
-@import "mixins/prefix";
-@import "mixins/preloader";
-@import "mixins/ratio";
-@import "mixins/rem";
+@import 'mixins/accessibility';
+@import 'mixins/clearfix';
+@import 'mixins/em';
+@import 'mixins/flexbox';
+@import 'mixins/font-size';
+@import 'mixins/grid';
+@import 'mixins/media-queries';
+@import 'mixins/overlay';
+@import 'mixins/prefix';
+@import 'mixins/preloader';
+@import 'mixins/ratio';
+@import 'mixins/rem';
 
 // Reset
-@import "reset/normalize";
+@import 'reset/normalize';
 
 // Tools
-@import "tools/animations";
+@import 'tools/animations';
 
 // Layout
-@import "layout/base";
-@import "layout/grid";
+@import 'layout/base';
+@import 'layout/grid';
 
 // Helpers
-@import "helpers/colors";
-// @import "helpers/spacing";
-@import "helpers/images";
-@import "helpers/typography";
+@import 'helpers/colors';
+// @import 'helpers/spacing';
+@import 'helpers/images';
+@import 'helpers/typography';
 
 // Objects
-@import "objetcs/equal-height";
-@import "objetcs/media-object";
+@import 'objetcs/equal-height';
+@import 'objetcs/media-object';
 
 // Components
-@import "components/buttons";
-@import "components/forms";
-@import "components/tables";
+@import 'components/buttons';
+@import 'components/forms';
+@import 'components/tables';

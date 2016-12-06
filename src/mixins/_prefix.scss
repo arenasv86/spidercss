@@ -8,7 +8,7 @@
 // @param {*} $value - Property value
 // @param {List} $prefixes (()) - List of prefixes to print
 @mixin prefix($property, $value, $prefixes: (webkit moz ms)) {
-   @each $prefix in $prefixes{
+  @each $prefix in $prefixes {
     #{'-' + $prefix + '-' + $property}: $value;
   }
   // Output standard non-prefixed declaration

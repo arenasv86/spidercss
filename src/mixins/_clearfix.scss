@@ -2,10 +2,11 @@
 // = Clearfix
 // =============================================================================
 
-@mixin clearfix() {
-  &:after {
-    content: "" !important;
+@mixin clearfix {
+
+  &::after {
     display: block !important;
-    clear  : both !important;
+    clear: both !important;
+    content: '' !important;
   }
 }

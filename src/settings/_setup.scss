@@ -10,27 +10,27 @@
 // Set up the base font size for your project.
 // If you want you can change the line height.
 
-$base-font-size              : 16px !default;
-$line-height-ratio           : 1.5 !default;
-$base-line-height            : $base-font-size * $line-height-ratio !default;
+$base-font-size: 16px !default;
+$line-height-ratio: 1.5 !default;
+$base-line-height: $base-font-size * $line-height-ratio !default;
 
 // =========================
 // = Flexbox Grid Settings =
 // =========================
-$generate-flexbox-grid        : true;
+$generate-flexbox-grid: true;
 $generate-flexbox-grid-offsets: false;
-$grid-columns                 : 12 !default;
-$grid-columns-mobile          : 4 !default;
-$gutter-width                 : 15px !default;
-$container-desktop-padding    : 30px !default;
-$container-mobile-padding     : 15px !default;
-$row-max-width                : 1180px !default;
+$grid-columns: 12 !default;
+$grid-columns-mobile: 4 !default;
+$gutter-width: 15px !default;
+$container-desktop-padding: 30px !default;
+$container-mobile-padding: 15px !default;
+$row-max-width: 1180px !default;
 
 // ===============
 // = Breakpoints =
 // ===============
 // Each breakpoint defined here will be accessible with the 'breakpoint' mixin.
-$responsive-breakpoints : (
+$responsive-breakpoints: (
   mobile: rem(767px),
   tablet: rem(1024px)
 );
@@ -38,39 +38,39 @@ $responsive-breakpoints : (
 // ===============
 // = Font Styles =
 // ===============
-$basetypeface                : "Helvetica Neue", Helvetica, Arial, sans-serif;
-$light                       : 300;
-$normal                      : 400;
-$semibold                    : 500;
-$bold                        : 600;
+$basetypeface: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+$light: 300;
+$normal: 400;
+$semibold: 500;
+$bold: 600;
 
 // ==============
 // = Font Sizes =
 // ==============
 // Each font size defined here will be accessible with 'fsize' function.
-$font-sizes : (
-  'xxlarge' : 48px,
-  'xlarge' : 32px,
-  'large' : 24px,
-  'medium' : 18px,
-  'base' : 16px,
-  'small' : 14px,
-  'xsmal' : 12px
+$font-sizes: (
+  'xxlarge': 48px,
+  'xlarge': 32px,
+  'large': 24px,
+  'medium': 18px,
+  'base': 16px,
+  'small': 14px,
+  'xsmal': 12px
 );
 
 // ==========
 // = Colors =
 // ==========
 // Each color defined here will be accessible with 'color' function.
-$base-colors : (
-  'darkblack' : #363E47,
-  'softblack' : #546673,
-  'linegrey' : #D5DEE3,
+$base-colors: (
+  'darkblack': #363e47,
+  'softblack': #546673,
+  'linegrey': #d5dee3,
   'white': #fff,
-  'purple': #52489C,
-  'blue' : #4062BB,
-  'green' : #59C3C3,
-  'red' : #F45B69
+  'purple': #52489c,
+  'blue': #4062bb,
+  'green': #59c3c3,
+  'red': #f45b69
 );
 
 
@@ -87,6 +87,6 @@ $generate-color-helpers: true;
 $generate-spacing-helpers: true;
 
 
-$base-radius                : 4px !default;
-$base-transition            : 0.25s !default;
+$base-radius: 4px !default;
+$base-transition: .25s !default;
 $outline-button-border-width: 2px;
