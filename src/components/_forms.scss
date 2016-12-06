@@ -40,8 +40,7 @@ textarea {
   }
 }
 
-input[disabled],
-textarea[disabled] {
+[disabled] {
   background-color: #f5f5f5;
   color: color('grey');
   cursor: not-allowed;
@@ -136,12 +135,13 @@ textarea {
       position: relative;
       width: rem(40px);
       height: rem(22px);
+      padding: rem(2px);
       outline: 0;
       cursor: pointer;
       user-select: none;
       background: color('linegrey');
       border-radius: rem(20px);
-      padding: rem(2px);
+
 
       &::after {
         @include prefix(transition, all $base-transition ease);
@@ -181,6 +181,7 @@ textarea {
 // = Form Groups =
 // ===============
 .form-group {
+
   &__field {
     margin-bottom: rem(15px);
 
