@@ -1,0 +1,34 @@
+section.doc-block
+  h2.doc-block__main-title Basic Configuration
+  .doc-block__description
+    p Okay, we have SpiderCSS installed in our project. Let's see some basic configuration for the project and how to adapt the framework to our needs.
+    p In the source files, go to Settings > _setup.scss
+
+  strong.doc-block__small-title Base Typograhpy
+  pre
+    code(class="language-scss")
+      :markdown-it
+        $base-font-size: 16px !default;
+        $line-height-ratio: 1.5 !default;
+        $base-line-height: $base-font-size * $line-height-ratio !default;
+
+  strong.doc-block__small-title Common Variables
+  pre
+    code(class="language-scss")
+      :markdown-it
+        $base-radius: 4px !default;
+        $base-transition: .25s !default;
+        $outline-button-border-width: 2px;
+
+  strong.doc-block__small-title Common Variables
+  pre
+    code(class="language-scss")
+      :markdown-it
+        $generate-flexbox-grid: true; // Generate the grid classes. If you don't want to use the grid, set it to false.
+        $generate-flexbox-grid-offsets: false; //With flexbox you can align the columns within the row, so probably you'll don't need it. Anyway you can generate the offsets if you want.
+        $grid-columns: 12 !default; // The number of columns for the grid (the major part of grids uses 12 or 16)
+        $grid-columns-mobile: 4 !default; // The number of columns for the grid in mobile (If you want to use the 12 columns instead, change it.)
+        $gutter-width: 15px !default; // The spacing between grid columns.
+        $container-desktop-padding: 30px !default; //The horizontal padding for the container
+        $container-mobile-padding: 15px !default; //The horizontal padding for the container in mobile
+        $row-max-width: 1180px !default; // The max width size for the grid

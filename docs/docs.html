@@ -32,11 +32,17 @@
           <div class="row">
             <aside class="docs-sidebar col">
               <nav class="docs-nav" id="scrollSpy">
-                <h3 class="docs-nav__section-title">BASIC</h3>
+                <h3 class="docs-nav__section-title">GETTING STARTED</h3>
                 <ul class="docs-nav__block">
                   <li class="docs-nav__item"><a class="docs-nav__link" href="">Introduction</a></li>
                   <li class="docs-nav__item"><a class="docs-nav__link" href="">Installation</a></li>
-                  <li class="docs-nav__item"><a class="docs-nav__link" href="">Configuration</a></li>
+                  <li class="docs-nav__item"><a class="docs-nav__link" href="">Usage</a></li>
+                </ul>
+                <h3 class="docs-nav__section-title">CONFIGURATION</h3>
+                <ul class="docs-nav__block">
+                  <li class="docs-nav__item"><a class="docs-nav__link" href="">Basic Configuration</a></li>
+                  <li class="docs-nav__item"><a class="docs-nav__link" href="">Functions</a></li>
+                  <li class="docs-nav__item"><a class="docs-nav__link" href="">Helpers</a></li>
                 </ul>
                 <h3 class="docs-nav__section-title">GRID</h3>
                 <ul class="docs-nav__block">
@@ -46,13 +52,6 @@
                   <li class="docs-nav__item"><a class="docs-nav__link" href="">Offsets</a></li>
                   <li class="docs-nav__item"><a class="docs-nav__link" href="">Nested Grids</a></li>
                   <li class="docs-nav__item"><a class="docs-nav__link" href="">Align Content</a></li>
-                </ul>
-                <h3 class="docs-nav__section-title">BASIC</h3>
-                <ul class="docs-nav__block">
-                  <li class="docs-nav__item"><a class="docs-nav__link" href="">Introduction</a></li>
-                  <li class="docs-nav__item"><a class="docs-nav__link" href="">Installation</a></li>
-                  <li class="docs-nav__item"><a class="docs-nav__link" href="">Basic Configuration</a></li>
-                  <li class="docs-nav__item"><a class="docs-nav__link" href="">Advanced Configuration</a></li>
                 </ul>
                 <h3 class="docs-nav__section-title">UI COMPONENTS</h3>
                 <ul class="docs-nav__block">
@@ -99,6 +98,70 @@
                 <div class="doc-block__description">
                   <p>If you want, you can use the compiled stylesheet in your project. Just find the file spidercss.min.css in the project dist folder and include it inside your document head.</p>
                 </div>
+              </section>
+              <section class="doc-block">
+                <h2 class="doc-block__main-title">Project Structure</h2>
+                <div class="doc-block__description">
+                  <p>Spider CSS is a powerful SASS and Flexbox framework focused on performance and flexibility for medium and large projects. It isn't another UI Framework like Bootstrap, it just provides common functions, helpers, mixins and some basic UI elements for build webapps.</p>
+                </div>
+                <h3 class="doc-block__subtitle">Project Structure</h3>
+                <pre><code class="language-markdown"><pre><code>├── src/
+│   ├── components
+│   │   ├── _buttons.scss
+│   │   ├── _forms.scss
+│   │   ├── _tables.scss
+│   ├── helpers
+│   │   ├── _colors.scss
+│   │   ├── _images.scss
+│   │   ├── _typograhpy.scss
+│   ├── layout
+│   │   ├── _base.scss
+│   │   ├── _grid.scss
+│   ├── mixins
+│   │   ├── _em.scss
+│   │   ├── _flexbox.scss
+│   │   ├── _font-size.scss
+│   │   ├── _grid.scss
+│   │   ├── _media-queries.scss
+│   │   ├── _ratio.scss
+│   │   ├── _rem.scss
+│   │   ├── _tools.scss
+│   ├── objects
+│   │   ├── _equal-height.scss
+│   │   ├── _media-object.scss
+│   ├── reset
+│   │   ├── _normalice.scss
+│   ├── settings
+│   │   ├── _functions.scss
+│   │   ├── _setup.scss
+│   ├── tools
+│   │   ├── _animations.scss
+│   ├── spidercss.scss</code></pre>
+</code></pre>
+              </section>
+              <section class="doc-block">
+                <h2 class="doc-block__main-title">Basic Configuration</h2>
+                <div class="doc-block__description">
+                  <p>Okay, we have SpiderCSS installed in our project. Let's see some basic configuration for the project and how to adapt the framework to our needs.</p>
+                  <p>In the source files, go to Settings > _setup.scss</p>
+                </div><strong class="doc-block__small-title">Base Typograhpy</strong>
+                <pre><code class="language-scss"><p>$base-font-size: 16px !default;
+$line-height-ratio: 1.5 !default;
+$base-line-height: $base-font-size * $line-height-ratio !default;</p>
+</code></pre><strong class="doc-block__small-title">Common Variables</strong>
+                <pre><code class="language-scss"><p>$base-radius: 4px !default;
+$base-transition: .25s !default;
+$outline-button-border-width: 2px;</p>
+</code></pre><strong class="doc-block__small-title">Common Variables</strong>
+                <pre><code class="language-scss"><p>$generate-flexbox-grid: true; // Generate the grid classes. If you don't want to use the grid, set it to false.
+$generate-flexbox-grid-offsets: false; //With flexbox you can align the columns within the row, so probably you'll don't need it. Anyway you can generate the offsets if you want.
+$grid-columns: 12 !default; // The number of columns for the grid (the major part of grids uses 12 or 16)
+$grid-columns-mobile: 4 !default; // The number of columns for the grid in mobile (If you want to use the 12 columns instead, change it.)
+$gutter-width: 15px !default; // The spacing between grid columns.
+$container-desktop-padding: 30px !default; //The horizontal padding for the container
+$container-mobile-padding: 15px !default; //The horizontal padding for the container in mobile
+$row-max-width: 1180px !default; // The max width size for the grid</p>
+</code></pre>
               </section>
             </main>
           </div>

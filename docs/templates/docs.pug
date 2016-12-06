@@ -19,11 +19,17 @@ block content
       .row
         aside.docs-sidebar.col
           nav.docs-nav#scrollSpy
-            h3.docs-nav__section-title BASIC
+            h3.docs-nav__section-title GETTING STARTED
             ul.docs-nav__block
               li.docs-nav__item: a.docs-nav__link(href="") Introduction
               li.docs-nav__item: a.docs-nav__link(href="") Installation
-              li.docs-nav__item: a.docs-nav__link(href="") Configuration
+              li.docs-nav__item: a.docs-nav__link(href="") Usage
+
+            h3.docs-nav__section-title CONFIGURATION
+            ul.docs-nav__block
+              li.docs-nav__item: a.docs-nav__link(href="") Basic Configuration
+              li.docs-nav__item: a.docs-nav__link(href="") Functions
+              li.docs-nav__item: a.docs-nav__link(href="") Helpers
 
             h3.docs-nav__section-title GRID
             ul.docs-nav__block
@@ -34,13 +40,6 @@ block content
               li.docs-nav__item: a.docs-nav__link(href="") Nested Grids
               li.docs-nav__item: a.docs-nav__link(href="") Align Content
 
-            h3.docs-nav__section-title BASIC
-            ul.docs-nav__block
-              li.docs-nav__item: a.docs-nav__link(href="") Introduction
-              li.docs-nav__item: a.docs-nav__link(href="") Installation
-              li.docs-nav__item: a.docs-nav__link(href="") Basic Configuration
-              li.docs-nav__item: a.docs-nav__link(href="") Advanced Configuration
-
             h3.docs-nav__section-title UI COMPONENTS
             ul.docs-nav__block
               li.docs-nav__item: a.docs-nav__link(href="") Buttons
@@ -50,6 +49,8 @@ block content
 
         main.col
           include documentation/_start
+
+          include documentation/_configuration
 
           //- include documentation/_grid
           //-
