@@ -1,11 +1,11 @@
 // =============================================================================
 // = Media Block
 // =============================================================================
-// 
+//
 // Add the class o-equal-height at the parent element, and then o-equal-height__item to each item inside to make it all stretched to the same height
 //
 .o-media {
-  display    : flex;
+  display: flex;
   align-items: flex-start;
 
   &__image {

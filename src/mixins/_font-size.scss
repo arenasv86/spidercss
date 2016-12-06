@@ -6,7 +6,7 @@
 //
 @mixin font-size($font-size: $base-font-size, $line-height: $font-size * $line-height-ratio) {
 
-  @if (unitless($font-size)){
+  @if (unitless($font-size)) {
     $font-size: $font-size * 1px;
   }
 
@@ -14,7 +14,7 @@
     $line-height: $line-height * 1px;
   }
 
-  font-size  : ($font-size / $base-font-size) + rem;
+  font-size: ($font-size / $base-font-size) + rem;
   line-height: ($line-height / $base-font-size) + rem;
 
 }

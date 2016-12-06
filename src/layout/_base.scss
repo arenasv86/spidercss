@@ -7,37 +7,32 @@
 // ===========
 
 html {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing   : border-box;
-  box-sizing        : border-box;
+  @include prefix(box-sizing, border-box, moz webkit);
+  @include rem-baseline;
+  min-height: 100%;
+  line-height: $base-line-height;
+  text-rendering: optimizeLegibility;
 }
 
 * {
   &,
-  &:after,
-  &:before {
+  &::after,
+  &::before {
     box-sizing: inherit;
   }
 }
 
-html {
-  @include rem-baseline();
-  line-height   : $base-line-height;
-  min-height    : 100%;
-  text-rendering: optimizeLegibility;
-}
-
 body {
-  font-family     : $basetypeface;
-  font-weight     : $normal;
   background-color: white;
-  color           : color('softblack');
+  color: color('softblack');
+  font-family: $basetypeface;
+  font-weight: $normal;
 }
 
 body,
 button,
 input {
-  -webkit-font-smoothing : antialiased;
+  -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
@@ -46,9 +41,9 @@ table {
 }
 
 a {
-  color          : color('purple');
-  text-decoration: none;
   @include prefix(transition, all $base-transition ease);
+  color: color('purple');
+  text-decoration: none;
 }
 
 ::-moz-selection,

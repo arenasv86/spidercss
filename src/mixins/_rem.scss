@@ -10,11 +10,11 @@ $rem-fallback: true !default;
 $rem-px-only: false !default;
 
 @function rem-separator($list, $separator: false) {
-  @if $separator == "comma" or $separator == "space" {
+  @if $separator == 'comma' or $separator == 'space' {
     @return append($list, null, $separator);
   }
 
-  @if function-exists("list-separator") == true {
+  @if function-exists('list-separator') == true {
     @return list-separator($list);
   }
 
@@ -36,11 +36,11 @@ $rem-px-only: false !default;
   $separator: rem-separator($values);
 
   @each $value in $values {
-    @if type-of($value) == "number" and unit($value) == "rem" and $to == "px" {
+    @if type-of($value) == 'number' and unit($value) == 'rem' and $to == 'px' {
       $result: append($result, $value / 1rem * $rem-baseline + 0px, $separator);
-    } @else if type-of($value) == "number" and unit($value) == "px" and $to == "rem" {
+    } @else if type-of($value) == 'number' and unit($value) == 'px' and $to == 'rem' {
       $result: append($result, $value / $rem-baseline + 0rem, $separator);
-    } @else if type-of($value) == "list" {
+    } @else if type-of($value) == 'list' {
       $value-separator: rem-separator($value);
       $value: rem-convert($to, $value...);
       $value: rem-separator($value, $value-separator);
@@ -62,7 +62,7 @@ $rem-px-only: false !default;
 }
 
 @mixin rem($properties, $values...) {
-  @if type-of($properties) == "map" {
+  @if type-of($properties) == 'map' {
     @each $property in map-keys($properties) {
       @include rem($property, map-get($properties, $property));
     }

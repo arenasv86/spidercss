@@ -10,19 +10,19 @@
 // .myitem {
 //   background-color:red;
 //
-//   @include responsive(tablet) {
+//   @include breakpoint(tablet) {
 //     background-color: black;
 //   }
 //
-//   @include responsive(mobile) {
+//   @include breakpoint(mobile) {
 //     background-color: blue;
 //   }
 // }
 //
-@mixin device($breakpoint) {
-   @if map-has-key($responsive-breakpoints, $breakpoint){
+@mixin breakpoint($breakpoint) {
+  @if map-has-key($responsive-breakpoints, $breakpoint) {
     @media (max-width: #{map-get($responsive-breakpoints, $breakpoint)}) {
-       @content;
+      @content;
     }
   }
 }

@@ -6,15 +6,15 @@
 // = Button Filled =
 // =================
 .btn {
-  display         : inline-block;
-  font-weight     : bold;
-  text-transform  : uppercase;
-  color           : #fff;
-  padding         : em(10px 25px);
-  font-size       : fsize('small');
-  letter-spacing  : 1px;
-  border-radius   : $base-radius;
+  display: inline-block;
+  padding: em(10px 25px);
+  border-radius: $base-radius;
   background-color: color('purple');
+  color: #fff;
+  font-size: fsize('small');
+  font-weight: bold;
+  letter-spacing: 1px;
+  text-transform: uppercase;
 
   &:hover {
     background-color: darken(color('purple'), 5%);
@@ -28,7 +28,7 @@
     }
     @include preloader(18px, 2px, white, absolute);
 
-    &:before {
+    &::before {
       margin: 2px 2px 2px -9px;
     }
   }
@@ -39,14 +39,14 @@
 // ==================
 .btn-outline {
   @extend .btn;
-  padding         : em(8px 25px);
+  padding: em(8px 25px);
+  border: 2px solid color('purple');
   background-color: transparent;
-  border          : 2px solid color('purple');
-  color           : color('purple');
+  color: color('purple');
 
   &:hover {
     background-color: color('purple');
-    color           : white;
+    color: white;
   }
 }
 
@@ -55,6 +55,6 @@
 // =================
 .btn--small {
   @extend .btn;
-  padding  : em(5px 20px);
+  padding: em(5px 20px);
   font-size: fsize('small');
 }

@@ -41,15 +41,15 @@
   $result: ();
 
   @each $value in $values {
-    @if $value == 0 or type-of($value) != "number" {
+    @if $value == 0 or type-of($value) != 'number' {
       $result: append($result, $value);
     } @else {
       $unit: unit($value);
       $value: parse-int($value);
 
-      @if $unit == "px" {
+      @if $unit == 'px' {
         $result: append($result, add-em-unit($value / ($base-font-size * $em-base)));
-      } @else if $unit == "em" {
+      } @else if $unit == 'em' {
         $result: append($result, add-em-unit($value / $em-base));
       }
     }
