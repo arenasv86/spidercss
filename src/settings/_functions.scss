@@ -5,9 +5,12 @@
 // ===========
 // = Colors  =
 // ===========
+//
 // This function returns an easy way to access the data mapped in $base-colors
+//
 // Example:
 // .myclass { background: color('darkblack'); }
+//
 
 @function color($color) {
   @return map-get($base-colors, $color);
@@ -17,7 +20,10 @@
 // ===============
 // = Font Sizes  =
 // ===============
+//
 // This function returns an easy way to access the data mapped in $font-sizes
+//
+// Example:
 // .myclass { font-size: fsize('medium'); }
 //
 
