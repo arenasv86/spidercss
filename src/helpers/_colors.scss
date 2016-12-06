@@ -5,6 +5,15 @@
 // ============================================
 // = Generate Fill Background & Class Colors  =
 // ============================================
+//
+// For each color mapped in '$base-colors' it will be generated a font color
+// and background color helper.
+// 
+// Markup:
+// <h3 class="text-darkblack">My text</h3>
+// <div class="fill-darkblack"></div>
+//
+
 @if $generate-color-helpers == true {
 
   @each $name, $value in $base-colors {

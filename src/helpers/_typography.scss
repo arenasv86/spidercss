@@ -2,9 +2,16 @@
 // = Typography
 // =============================================================================
 
-// ====================================
-// = Generate Classes for Font Sizes  =
-// ====================================
+// ==============================
+// = Generate Font Size Helpers =
+// ==============================
+//
+// For each size mapped in '$font-sizes' it will be generated a font size helper.
+//
+// Markup:
+// <h3 class="t-medium">My text</h3>
+//
+
 @if $generate-font-helpers == true {
   @each $name, $size in $font-sizes {
     .t-#{$name} {
@@ -13,7 +20,9 @@
   }
 }
 
-
+// ===============
+// = Text Blocks =
+// ===============
 .text-block {
   p,
   ul {
@@ -29,6 +38,9 @@
 // ============
 // = Ellipsis =
 // ============
+//
+// Truncate text when is larger than its parent element
+//
 .ellipsis {
   display: inline-block;
   max-width: 100%;
@@ -40,6 +52,10 @@
 // ===========================
 // = Text not not selectable =
 // ===========================
+//
+// Disallow users to select text
+//
+
 .not-selectable {
   @include prefix(user-select, none);
   @include prefix(text-size-adjust, none, ms webkit);
@@ -50,12 +66,20 @@
 // ===================
 // = Text Formatting =
 // ===================
+//
+// Userful helpers for font styling
+//
+
 .light {
   font-weight: $light;
 }
 
 .normal {
   font-weight: $normal;
+}
+
+.semibold {
+  font-weight: $semibold;
 }
 
 .bold {

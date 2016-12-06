@@ -711,6 +711,9 @@ a {
 .normal {
   font-weight: 400; }
 
+.semibold {
+  font-weight: 500; }
+
 .bold {
   font-weight: 600; }
 

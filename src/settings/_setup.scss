@@ -2,14 +2,15 @@
 // = Project Setup
 // =============================================================================
 //
-// For better performance as the result of a lower file size, select the items that you want to include in your projects.
-//
-//
-//
+// For better performance as the result of a lower file size, select the items
+// that you want to include in your projects.
 //
 // Set up the base font size for your project.
 // If you want you can change the line height.
 
+// ==============
+// = Typograhpy =
+// ==============
 $base-font-size: 16px !default;
 $line-height-ratio: 1.5 !default;
 $base-line-height: $base-font-size * $line-height-ratio !default;
@@ -72,7 +73,6 @@ $base-colors: (
   'green': #59c3c3,
   'red': #f45b69
 );
-
 
 // ===========
 // = Helpers =
