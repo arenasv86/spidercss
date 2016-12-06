@@ -6,8 +6,8 @@
 // = Generate Fill Background & Class Colors  =
 // ============================================
 @if $generate-color-helpers == true {
-  
-   @each $name, $value in $base-colors{
+
+  @each $name, $value in $base-colors {
     .text-#{$name} {
       color: $value !important;
     }

@@ -6,18 +6,18 @@
 // = Grid General Settings =
 // =========================
 .container {
-  position     : relative;
-  max-width    : rem($row-max-width);
-  margin       : 0 auto;
-  padding-left : rem($container-desktop-padding);
+  position: relative;
+  max-width: rem($row-max-width);
+  margin: 0 auto;
   padding-right: rem($container-desktop-padding);
+  padding-left: rem($container-desktop-padding);
 }
 
 .container-full {
-  position     : relative;
-  max-width    : 100%;
-  padding-left : rem($container-desktop-padding);
+  position: relative;
+  max-width: 100%;
   padding-right: rem($container-desktop-padding);
+  padding-left: rem($container-desktop-padding);
 }
 
 .row {
@@ -26,9 +26,9 @@
   @include flex-flow(row wrap);
 
   .row {
-    margin-left : - rem($gutter-width);
+    width: auto;
     margin-right: - rem($gutter-width);
-    width       : auto;
+    margin-left: - rem($gutter-width);
   }
 
   &.reverse {
@@ -39,20 +39,21 @@
 
 [class*='col'] {
   @include flex(1);
-  padding-left : rem($gutter-width);
   padding-right: rem($gutter-width);
+  padding-left: rem($gutter-width);
+
 
   &.reverse {
     @include flex-direction(column-reverse);
   }
 
   .no-gutter & {
-    padding-left : 0;
     padding-right: 0;
+    padding-left: 0;
 
     .row {
-      margin-left : 0;
       margin-right: 0;
+      margin-left: 0;
     }
   }
 }
@@ -60,7 +61,7 @@
 // ================
 // = Grid Desktop =
 // ================
-@include grid-generator();
+@include grid-generator;
 @include visibility-classes(desktop);
 @include grid-helpers(desktop);
 
@@ -68,7 +69,7 @@
 // = Grid Tablet =
 // ===============
 @include breakpoint(tablet) {
-   @include grid-generator(tablet-);
+  @include grid-generator(tablet-);
   @include visibility-classes(tablet);
   @include grid-helpers(tablet);
 }
@@ -78,8 +79,8 @@
 // ==============
 @include breakpoint(mobile) {
   .container {
-    padding-left : $container-mobile-padding;
     padding-right: $container-mobile-padding;
+    padding-left: $container-mobile-padding;
   }
 
   // By default, each col in mobile fits the 100%.
@@ -87,6 +88,7 @@
   [class*='col'] {
     flex-basis: 100%;
   }
+
   @include grid-generator(mobile-, $grid-columns-mobile);
   @include visibility-classes(mobile);
   @include grid-helpers(mobile);
