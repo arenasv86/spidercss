@@ -1,69 +1,72 @@
 // Documentation
+//
+.site-header {
+  height: 80px;
+  margin-bottom: 4rem;
+  background-image: -webkit-linear-gradient(43deg, #38155a 0%, #d95b5a 52%, #fea54b 100%);
+  background-image: -o-linear-gradient(43deg, #38155a 0%, #d95b5a 52%, #fea54b 100%);
+  background-image: linear-gradient(133deg, #38155a 0%, #d95b5a 52%, #fea54b 100%);
+}
 
-.documentation {
+.docs-sidebar {
+  @include flex(0 0 300px);
+}
 
-  header {
-    height: 80px;
-    margin-bottom: 4rem;
-    background-image: -webkit-linear-gradient(43deg, #38155A 0%, #D95B5A 52%, #FEA54B 100%);
-    background-image: -o-linear-gradient(43deg, #38155A 0%, #D95B5A 52%, #FEA54B 100%);
-    background-image: linear-gradient(133deg, #38155A 0%, #D95B5A 52%, #FEA54B 100%);
+// Header Navigation
+.header-nav {
+  @include font-size(15px);
+  font-family: 'Brandon Grotesque';
+  font-weight: bold;
+  text-align: right;
+  text-transform: uppercase;
 
-    nav {
-      @include font-size(15px);
-      font-family: 'Brandon Grotesque';
-      font-weight: bold;
-      text-align: right;
-      text-transform: uppercase;
-
-      li {
-        display: inline-block;
-        margin: 0 15px;
-        list-style: none;
-      }
-
-      a {
-        color: white;
-      }
-    }
+  &__item {
+    display: inline-block;
+    margin: 0 15px;
+    list-style: none;
   }
 
-  aside {
-    @include flex(0 0 300px);
+  &__link {
+    color: white;
+  }
+}
 
-    h3 {
-      color: color('darkblack');
-      font-family: 'Brandon Grotesque';
-      font-weight: 800;
-    }
+// Sidebar Navigation
+.docs-nav {
 
-    ul {
-      margin-bottom: 3rem;
-      padding: 0;
-    }
+  &__section-title {
+    color: color('darkblack');
+    font-family: 'Brandon Grotesque';
+    font-weight: 800;
+  }
 
-    li {
-      margin-bottom: 5px;
-      list-style: none;
+  &__block {
+    margin-bottom: 3rem;
+    padding: 0;
+  }
 
-      &.active a {
-        background-color: color('primary');
-        color: white;
-        font-weight: bold;
-      }
+  &__item {
+    margin-bottom: 5px;
+    list-style: none;
+  }
 
-      a {
-        display: inline-block;
-        padding: 5px;
-      }
-    }
+  &__link {
+    display: inline-block;
+    padding: 5px;
+    color: color('primary');
+  }
+
+  &--is-active {
+    background-color: color('green');
+    color: white;
+    font-weight: bold;
   }
 }
 
 .doc-block {
   margin-bottom: rem(70px);
 
-  h2 {
+  &__main-title {
     @include font-size(28px);
     margin-bottom: rem(10px);
     color: color('darkblack');
@@ -72,41 +75,33 @@
     text-transform: uppercase;
   }
 
-  &__description {
-    margin-bottom: rem(30px);
-  }
-
-  h3,
-  h4 {
+  &__subtitle {
+    @include font-size(22px);
+    display: block;
     margin-bottom: rem(10px);
     color: color('darkblack');
     font-weight: bold;
   }
 
-  h3 {
-    @include font-size(22px);
+  &__small-title {
+    @extend .doc-block__subtitle;
+    @include font-size(18px);
   }
 
-  h4 {
-    @include font-size(18px);
+  &__description {
+    margin-bottom: rem(30px);
   }
 }
 
-// Demo Grid
 
+
+// Demo Grid
 .grid-demo {
   margin-bottom: 20px;
 
-  .item {
+  &__item {
     padding: rem(20px);
     border-radius: $base-radius;
-    background-color: color('softgrey');
+    background-color: #f0f0f0;
   }
-}
-
-
-.test {
-  @include responsive-ratio(16, 10);
-  background: url('http://htmlcolorcodes.com/assets/images/html-color-codes-color-tutorials-hero-00e10b1f.jpg') no-repeat;
-  background-size: cover;
 }

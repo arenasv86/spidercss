@@ -1,0 +1,56 @@
+section.doc-block
+  h2.doc-block__main-title Introduction
+  .doc-block__description
+    p Spider CSS is a powerful SASS and Flexbox framework focused on performance and flexibility for medium and large projects. It isn't another UI Framework like Bootstrap, it just provides common functions, helpers, mixins and some basic UI elements for build webapps.
+    p Thanks to SASS you can configure the project with your own variables and generate helpers and tools that make easier the UI development and improve your workflow.
+    p Let the game begin!
+
+
+section.doc-block
+  h2.doc-block__main-title Installation
+  .doc-block__description
+    p There are four simple ways to start working with SpiderCSS:
+
+  strong.doc-block__small-title Install it via Bower
+  pre
+    code(class="language-html")
+      :markdown-it
+        ```$ bower install spidercss --save```
+
+  strong.doc-block__small-title Install it via npm
+  pre
+    code(class="language-html")
+      :markdown-it
+        ```$ npm install spidercss --save```
+
+  strong.doc-block__small-title Clone the repo
+  pre
+    code(class="language-html")
+      :markdown-it
+        ```$ git clone https://github.com/arenasv86/spidercss.git```
+
+  strong.doc-block__small-title Download from Github
+  a.btn.btn-outline(href="https://github.com/arenasv86/spidercss/archive/master.zip") Download
+
+
+section.doc-block
+  h2.doc-block__main-title Usage
+  .doc-block__description
+    p There are two ways to getting started with Spider CSS:
+
+  strong.doc-block__small-title SASS (Recomended)
+  .doc-block__description
+    p I highly recommend to work directly with the source files in the project development. You'll can modify all the variables and configure it at your taste for build a strong project structure.
+    ol
+      li Copy the
+        strong &nbsp;dist&nbsp;
+        | folder to your project assets folder
+      li Import
+        strong &nbsp;spidercss.scss&nbsp;
+        | at the top of your
+        strong &nbsp;.scss&nbsp;
+        | main file
+
+  strong.doc-block__small-title Compiled CSS
+  .doc-block__description
+    p If you want, you can use the compiled stylesheet in your project. Just find the file spidercss.min.css in the project dist folder and include it inside your document head.

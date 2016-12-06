@@ -1,0 +1,56 @@
+extends includes/_layout
+
+block content
+
+  .documentation
+    header.site-header(role="banner")
+      .container
+        .row
+          .col1of2
+            .logo SpiderCSS
+          .col1of2
+            nav.header-nav(role="navigation")
+              ul
+                li.header-nav__item: a.header-nav__link(href="#") Home
+                li.header-nav__item: a.header-nav__link(href="#") Documentation
+                li.header-nav__item: a.header-nav__link(href="#") Github
+
+    .container
+      .row
+        aside.docs-sidebar.col
+          nav.docs-nav#scrollSpy
+            h3.docs-nav__section-title BASIC
+            ul.docs-nav__block
+              li.docs-nav__item: a.docs-nav__link(href="") Introduction
+              li.docs-nav__item: a.docs-nav__link(href="") Installation
+              li.docs-nav__item: a.docs-nav__link(href="") Configuration
+
+            h3.docs-nav__section-title GRID
+            ul.docs-nav__block
+              li.docs-nav__item: a.docs-nav__link(href="") Markup
+              li.docs-nav__item: a.docs-nav__link(href="") Responsive
+              li.docs-nav__item: a.docs-nav__link(href="") Fluid
+              li.docs-nav__item: a.docs-nav__link(href="") Offsets
+              li.docs-nav__item: a.docs-nav__link(href="") Nested Grids
+              li.docs-nav__item: a.docs-nav__link(href="") Align Content
+
+            h3.docs-nav__section-title BASIC
+            ul.docs-nav__block
+              li.docs-nav__item: a.docs-nav__link(href="") Introduction
+              li.docs-nav__item: a.docs-nav__link(href="") Installation
+              li.docs-nav__item: a.docs-nav__link(href="") Basic Configuration
+              li.docs-nav__item: a.docs-nav__link(href="") Advanced Configuration
+
+            h3.docs-nav__section-title UI COMPONENTS
+            ul.docs-nav__block
+              li.docs-nav__item: a.docs-nav__link(href="") Buttons
+              li.docs-nav__item: a.docs-nav__link(href="") Forms
+              li.docs-nav__item: a.docs-nav__link(href="") Tables
+              li.docs-nav__item: a.docs-nav__link(href="") Typography
+
+        main.col
+          include documentation/_start
+
+          //- include documentation/_grid
+          //-
+          //- include documentation/_components

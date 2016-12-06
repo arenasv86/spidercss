@@ -1,0 +1,17 @@
+doctype html
+html
+  head
+    title= title
+    link(rel='stylesheet', href='../docs/assets/css/base.css')
+
+  body
+    main
+      include _header
+
+      block content
+
+    //- != partial("includes/_footer")
+    script(src="https://code.jquery.com/jquery-3.1.0.slim.min.js" integrity="sha256-cRpWjoSOw5KcyIOaZNo4i6fZ9tKPhYYb6i5T9RSVJG8=" crossorigin="anonymous")
+
+    script(src="../docs/assets/javascripts/prism.js")
+    script(src="../docs/assets/javascripts/app.js")

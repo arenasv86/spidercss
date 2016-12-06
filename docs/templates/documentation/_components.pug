@@ -1,0 +1,82 @@
+section.doc-block
+  h2.doc-block__main-title Basic Buttons
+  .doc-block__description
+
+  a.btn(href="#") Basic button
+  a.btn.is--loading(href="#")
+    span Basic button
+  a.btn-outline(href="#") Basic button outline
+
+section.doc-block
+  h2.doc-block__main-title Tables
+  .doc-block__description
+  table.styled--table.table--fixed
+    thead
+      tr
+        td Hola
+        td Hola
+        td Hola
+        td Hola
+
+    tbody
+      tr
+        td Hola
+        td Hola
+        td Hola
+        td Hola
+      tr
+        td Hola
+        td Hola
+        td Hola
+        td Hola
+
+    tfoot
+      tr
+        td Hola
+        td Hola
+        td Hola
+        td Hola
+
+
+section.doc-block
+  h2.doc-block__main-title Forms
+  .doc-block__description
+    p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+  .form-group
+    .field
+      label Field Label
+      input(type="text" placeholder="Your name" disabled)
+    .field
+      label Field Label
+      input(type="password" placeholder="Your password")
+    .field
+      label.item-radio(for="radio-1")
+        input(type="radio" name="radio-name" id="radio-1")
+        | Radio 1
+      label.item-radio(for="radio-2")
+        input(type="radio" name="radio-name" id="radio-2")
+        | Radio 2
+    .field
+      label.item-checkbox(for="checkbox-1")
+        input(type="checkbox" name="checkbox-name" id="checkbox-1")
+        | Checkbox 1
+      label.item-checkbox(for="checkbox-2")
+        input(type="checkbox" name="checkbox-name" id="checkbox-2")
+        | Checkbox 2
+    .field
+      .form-switch
+        input#switch-demo.form-switch__field(type="checkbox")
+        label.form-switch__button(for="switch-demo")
+      span I accept conditions
+
+
+
+    .field
+      label Select Label
+      select
+        option Option 1
+        option Option 2
+
+    .field
+      textarea(placeholder="Type your comment")
