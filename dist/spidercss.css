@@ -39,12 +39,11 @@ pre {
 a {
   background-color: transparent;
   -webkit-text-decoration-skip: objects; }
-
-a:active, a:hover {
-  outline-width: 0; }
+  a:active, a:hover {
+    outline-width: 0; }
 
 abbr[title] {
-  border-bottom: none;
+  border-bottom: 0;
   text-decoration: underline;
   text-decoration: underline dotted; }
 
