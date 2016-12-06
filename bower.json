@@ -25,7 +25,7 @@
     "oocss",
     "smaccs"
   ],
-  "homepage": "index.html",
+  "homepage": "https://github.com/arenasv86/spidercss",
   "ignore": [
     "**/.*",
     "node_modules",
