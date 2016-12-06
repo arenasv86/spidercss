@@ -2,12 +2,18 @@
 // = Images
 // =============================================================================
 
+//
+// Force images to be fluid on responsive layouts
+//
 .responsive-img {
   display: block;
   max-width: 100%;
   height: auto;
 }
 
+//
+// Force images to fit its width to the parent element
+//
 .full-image {
   min-width: 100%;
 }
