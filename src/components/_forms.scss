@@ -120,59 +120,60 @@ textarea {
 // ===========
 // = Switchs =
 // ===========
+// Markup:
+// <label class="form-switch">
+//   <input class="form-switch__input" type="checkbox">
+//   <span class="form-switch__button"></span>
+// </label>
 .form-switch {
   display: inline-block;
   position: relative;
   top: -2px;
   vertical-align: middle;
 
-  input {
+  &__input {
     display: none;
 
-    + .switch-button {
-      @include prefix(transition, all $base-transition ease);
-      display: block;
-      position: relative;
-      width: rem(40px);
-      height: rem(22px);
-      padding: rem(2px);
-      outline: 0;
-      cursor: pointer;
-      user-select: none;
-      background: color('linegrey');
-      border-radius: rem(20px);
-
-
-      &::after {
-        @include prefix(transition, all $base-transition ease);
-        border-radius: 50%;
-        background: white;
-      }
-
-      &::after,
-      &::before {
-        display: block;
-        position: relative;
-        width: 50%;
-        height: 100%;
-        content: '';
-      }
-
-      &::after {
-        left: 0;
-      }
-
-      &::before {
-        display: none;
-      }
-    }
-
-    &:checked + .switch-button {
+    &:checked + .form-switch__button {
       background: color('purple');
     }
 
-    &:checked + .switch-button:after {
+    &:checked + .form-switch__button:after {
       left: 50%;
+    }
+  }
+
+  &__button {
+    @include prefix(transition, all $base-transition ease);
+    display: block;
+    position: relative;
+    width: rem(40px);
+    height: rem(22px);
+    padding: rem(2px);
+    border-radius: rem(20px);
+    outline: 0;
+    background: color('linegrey');
+    cursor: pointer;
+    user-select: none;
+
+    &::after,
+    &::before {
+      display: block;
+      position: relative;
+      width: 50%;
+      height: 100%;
+      content: '';
+    }
+
+    &::after {
+      @include prefix(transition, all $base-transition ease);
+      left: 0;
+      border-radius: 50%;
+      background: white;
+    }
+
+    &::before {
+      display: none;
     }
   }
 }

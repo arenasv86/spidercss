@@ -929,41 +929,40 @@ textarea {
   position: relative;
   top: -2px;
   vertical-align: middle; }
-  .form-switch input {
+  .form-switch__input {
     display: none; }
-    .form-switch input + .switch-button {
-      transition: all 0.25s ease;
+    .form-switch__input:checked + .form-switch__button {
+      background: #52489c; }
+    .form-switch__input:checked + .form-switch__button:after {
+      left: 50%; }
+  .form-switch__button {
+    transition: all 0.25s ease;
+    display: block;
+    position: relative;
+    width: 2.5rem;
+    height: 1.375rem;
+    padding: 0.125rem;
+    border-radius: 1.25rem;
+    outline: 0;
+    background: #d5dee3;
+    cursor: pointer;
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none; }
+    .form-switch__button::after, .form-switch__button::before {
       display: block;
       position: relative;
-      width: 2.5rem;
-      height: 1.375rem;
-      padding: 0.125rem;
-      outline: 0;
-      cursor: pointer;
-      -webkit-user-select: none;
-         -moz-user-select: none;
-          -ms-user-select: none;
-              user-select: none;
-      background: #d5dee3;
-      border-radius: 1.25rem; }
-      .form-switch input + .switch-button::after {
-        transition: all 0.25s ease;
-        border-radius: 50%;
-        background: white; }
-      .form-switch input + .switch-button::after, .form-switch input + .switch-button::before {
-        display: block;
-        position: relative;
-        width: 50%;
-        height: 100%;
-        content: ''; }
-      .form-switch input + .switch-button::after {
-        left: 0; }
-      .form-switch input + .switch-button::before {
-        display: none; }
-    .form-switch input:checked + .switch-button {
-      background: #52489c; }
-    .form-switch input:checked + .switch-button:after {
-      left: 50%; }
+      width: 50%;
+      height: 100%;
+      content: ''; }
+    .form-switch__button::after {
+      transition: all 0.25s ease;
+      left: 0;
+      border-radius: 50%;
+      background: white; }
+    .form-switch__button::before {
+      display: none; }
 
 .form-group__field {
   margin-bottom: 0.9375rem; }
