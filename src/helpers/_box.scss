@@ -1,0 +1,35 @@
+// =============================================================================
+// = Box
+// =============================================================================
+
+// ===============
+// = Box Helpers =
+// ===============
+
+[hidden] {
+  display: none;
+}
+
+.block {
+  display: block;
+}
+
+.inline-block {
+  display: inline-block;
+}
+
+.left {
+  float: left;
+}
+
+.right {
+  float: right;
+}
+
+.relative {
+  position: relative;
+}
+
+.absolute {
+  position: absolute;
+}
